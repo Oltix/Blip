@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="login.css">
+  <title>Login</title>
+</head>
+
+
+<body>
+  <div class="container" >
+    <div class="card-login">
+
+      <form>
+        <h1 class="header-main">Login</h1>
+
+        <div class="input-container">
+          <ion-icon name="people-outline"></ion-icon>
+          <input type="text" name="username" id="username" placeholder="Username" />
+        </div>
+        <p id="username-error">Please enter a valid Username!</p>
+
+        <div class="input-container">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <input type="password" name="password" id="password" placeholder="Password"/>
+        </div>
+        <p id="password-error">Please enter a valid Passowrd!</p>
+
+        <div class="checkbox-container">
+          <input type="checkbox" name="check" id="toggle" />
+          <label for="toggle">
+            <div class="checkbox-border-button">
+              <div>
+                <ion-icon name="checkmark-outline" class="tick"></ion-icon>
+              </div>
+            </div>
+            <p>Remember me</p>
+          </label>
+        </div>
+
+        <input type="submit" value="Login" class="button"/>
+
+        <div class="signup-text">
+          <p>Don't have an account?<a href="Signup.html"> Sign Up Now!</a></p>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+  <script>
+
+    var username = document.getElementById("username");
+    var usernameError = document.getElementById("username-error");
+
+username.addEventListener('input', function (e){
+
+    var userpattern = /^[A-Za-z][A-Za-z0-9_]{7,29}$/;
+    var currentValue = e.target.value;
+    var vlera = userpattern.test(currentValue);
+
+    if(vlera){
+        usernameError.style.display = 'none';
+    }else{
+        usernameError.style.display  = 'block';
+    }
+    })
+
+// 
+// 
+
+
+    var password = document.getElementById("password");
+    var passwordError = document.getElementById("password-error");
+
+password.addEventListener('input', function (e){
+
+    var userpattern1 = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    var currentValue1 = e.target.value;
+    var vlera1 = userpattern1.test(currentValue1);
+
+
+    if(vlera1){
+        passwordError.style.display = 'none';
+    }else{
+        passwordError.style.display  = 'block';
+    }
+    })
+
+  </script>
+
+  <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
+
+</body>
+
+</html>

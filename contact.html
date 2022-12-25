@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Work+Sans&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Work+Sans&display=swap">
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="contact.css">
+    <title>Join</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <ul class="topnav" id="dropdownClick">
+            <div class="topnav-left">
+                <h1>Blip</h1>
+                <img src="logo.png" alt="logo">
+            </div>
+            <li class="topnav-right"><a href="Signup.html">Sign Up</a></li>
+            <li class="topnav-right"><a href="Login.html">Sign In</a></li>
+            <li class="topnav-right"><a href="contact.html">Contact</a></li>
+            <li class="topnav-right"><a href="index.html">Projects</a></li>
+            <li class="topnav-right"><a href="home.html">Home</a></li>
+            <li class="dropdownIcon"><a href="javascript:void(0)" onclick="dropdownMenu()">&#9776;</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="box">
+        <div class="leftside-box">
+            <div class="image">
+                <div class="image-text">
+                    <h3 class="text">Join Us</h3>
+                </div>
+            </div>
+        </div>
+        <div class="rightside-box">
+            <h1>Get In Touch</h1>
+            <form>
+                <div class="username">
+                    <input type="text" placeholder="Username" id="username">
+                </div>
+                <div class="password">
+                    <input type="text" placeholder="Password" id="password">
+                </div>
+                <div class="mesazhi">
+                    <textarea id="mesazhi" placeholder="Message" cols="38" rows="2"></textarea>
+                </div>
+                <input type="submit" value="Send" id="send">
+            </form>
+        </div>
+    </div>
+
+
+
+    <script>
+        function dropdownMenu() {
+            var x = document.getElementById("dropdownClick");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        window.onscroll = function () {
+         scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                document.querySelector(".topnav").style.boxShadow =
+                "0px 0px 20px 0px rgba(0,0,0,0.5)";
+                document.querySelector(".topnav").style.backgroundColor = "#F6F6F6";
+            } else {
+                document.querySelector(".topnav").style = "";
+            }
+        }
+         
+
+
+
+            
+
+    </script>
+</body>
+
+</html>

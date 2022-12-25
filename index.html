@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Work+Sans&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="logo.png">
+
+    <title>About Us</title>
+</head>
+
+<body>
+
+    <nav>
+        <ul class="topnav" id="dropdownClick">
+            <div class="topnav-left">
+                <h1>Blip</h1>
+                <img src="logo.png" alt="logo">
+            </div>
+            <li class="topnav-right"><a href="#">Sign Up</a></li>
+            <li class="topnav-right"><a href="Login.html">Sign In</a></li>
+            <li class="topnav-right"><a href="contact.html">Contact</a></li>
+            <li class="topnav-right"><a href="index.html">Projects</a></li>
+            <li class="topnav-right"><a href="home.html">Home</a></li>
+            <li class="dropdownIcon"><a href="javascript:void(0)" onclick="dropdownMenu()">&#9776;</a></li>
+        </ul>
+    </nav>
+
+    <div class="container section1">
+        <h1>We Create The Trend</h1>
+        <h3>Lorem ipsum dolor sit amet consectetur</h3>
+        <div class="buttons">
+            <a href="#">Learn More</a>
+        </div>
+    </div>
+
+    <div class="container section2">
+        <h1>Helps you create
+           a clean and efficient Website</h1>
+            <p>We have created numerous websites for big companies</p>
+
+                <div class="projects col-12">
+                    <div class="col-3">
+                        <h1>Twitter</h1>
+                        <div class="twitter">
+                            <a href="#">
+                                <img src="twitter.png" alt="twitter">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <h1>Netflix</h1>
+                        <div class="netflix">
+                            <a href="#">
+                                <img src="netflix.png" alt="netflix">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <h1>Yahoo</h1>
+                        <div class="yahoo">
+                            <a href="#">
+                                <img src="yahoo.png" alt="yahoo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <h1>Reddit</h1>
+                        <div class="reddit">
+                            <a href="#">
+                                <img src="reddit.png" alt="reddit">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+
+    <div class="container section3">
+        <h1>We always stay with our clients and respect their business. We deliver 100% and provide instant responses to help them succeed in a constantly changing and challenging business world.</h1>
+
+        <div class="clients-container">
+            <div class="clients-box">
+                <img src="profile.png" alt="avatar">
+                <h3>Robin Williams</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ad minus voluptatem nobis illum, debitis libero ab deserunt voluptatibus inventore illo laudantium rerum na</p>
+            </div>
+            <div class="clients-box">
+                <img src="profile.png" alt="avatar">
+                <h3>Robin Williams</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ad minus voluptatem nobis illum, debitis libero ab deserunt voluptatibus inventore illo laudantium rerum na</p>
+            </div>
+            <div class="clients-box">
+                <img src="profile.png" alt="avatar">
+                <h3>Robin Williams</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ad minus voluptatem nobis illum, debitis libero ab deserunt voluptatibus inventore illo laudantium rerum na</p>
+            </div>
+            <div class="clients-box">
+                <img src="profile.png" alt="avatar">
+                <h3>Robin Williams</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ad minus voluptatem nobis illum, debitis libero ab deserunt voluptatibus inventore illo laudantium rerum na</p>
+            </div>
+        </div>
+        <p>We are Here to make you the greatest Website ever</p>
+
+        
+    </div>
+
+
+    <footer class="footer2">
+        <div class="row2">
+            <div class="leftside-section">
+                <div class="aboutus-p">
+                    <h1>About us</h1>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi alias dolore, dolorum nisi fugit
+                        veritatis delectus suscipit.
+                    </p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="company rightside-section">
+                    <h1>Company</h1>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-3 contactus  rightside-section">
+                <h1>Contact Us</h1>
+                <div class="lastsection-links">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-google"></a>
+                    <a href="#" class="fa fa-envelope-o"></a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+
+
+
+    <script>
+        function dropdownMenu() {
+            var x = document.getElementById("dropdownClick");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else
+                x.className = "topnav";
+        }
+
+        window.onscroll = function () {
+         scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                document.querySelector(".topnav").style.boxShadow =
+                "0px 0px 20px 0px rgba(0,0,0,0.5)";
+                document.querySelector(".topnav").style.backgroundColor = "#F6F6F6";
+            } else {
+                document.querySelector(".topnav").style = "";
+            }
+        }
+         
+
+
+
+    </script>
+
+</body>
+
+</html>
